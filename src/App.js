@@ -1,7 +1,12 @@
 import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-function App() {
+/// Pages
+import BookPage from './pages/book';
+
+function AppPage() {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +24,17 @@ function App() {
         </a>
       </header>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<BookPage/>}/>
+        <Route path='/app-page' element={<AppPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
