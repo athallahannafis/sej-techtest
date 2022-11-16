@@ -5,6 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 /// Pages
 import BookPage from './pages/book';
+import BookmarkPage from './pages/bookmark';
 
 function AppPage() {
   return (
@@ -33,6 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<BookPage/>}/>
         <Route path='/app-page' element={<AppPage/>}/>
+        <Route path='/bookmarks' element={<BookmarkPage/>}/>
       </Routes>
     </BrowserRouter>
   );
